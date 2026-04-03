@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://kfwi3ifcup1c"]
+
+[ext_resource type="Script" uid="uid://cm6tfkcelni23" path="res://scripts/winScreen.gd" id="1_kcs6a"]
+
+[node name="WinScreen" type="ColorRect" unique_id=1178917513]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12156863, 0.52156866, 0.16862746, 1)
+script = ExtResource("1_kcs6a")
+
+[node name="Label" type="Label" parent="." unique_id=1363542493]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "YOU WIN !"
+horizontal_alignment = 1
+vertical_alignment = 1

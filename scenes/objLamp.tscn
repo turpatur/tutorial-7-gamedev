@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://doltqdncnrcbx"]
+
+[ext_resource type="Script" uid="uid://dxciw4ibdlnm4" path="res://scripts/pickable.gd" id="1_1j585"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j585"]
+albedo_color = Color(1, 0.27450982, 0.27450982, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eb5wr"]
+albedo_color = Color(1, 0.41568628, 0.7294118, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vi3qk"]
+albedo_color = Color(1, 1, 0.32941177, 1)
+
+[node name="ObjLamp" type="Node3D" unique_id=2123553320]
+
+[node name="Lamp" type="CSGCombiner3D" parent="." unique_id=16380358]
+use_collision = true
+
+[node name="LampBase" type="CSGCylinder3D" parent="Lamp" unique_id=1017736435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3223877, 0)
+radius = 1.066
+height = 0.523
+cone = true
+material = SubResource("StandardMaterial3D_1j585")
+
+[node name="LampPole" type="CSGCylinder3D" parent="Lamp" unique_id=529073129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2500938, 0)
+radius = 0.27441406
+height = 3.578426
+material = SubResource("StandardMaterial3D_eb5wr")
+
+[node name="LampCover" type="CSGPolygon3D" parent="Lamp" unique_id=2040476266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9941406, 0)
+polygon = PackedVector2Array(0, 0, 0.0592041, 1.1651611, 1.0197754, 1.1365356, 1.9979248, -0.31103516)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 8
+material = SubResource("StandardMaterial3D_vi3qk")
+
+[node name="Pickable" type="Node" parent="Lamp" unique_id=271428823]
+script = ExtResource("1_1j585")
+metadata/_custom_type_script = "uid://dxciw4ibdlnm4"
